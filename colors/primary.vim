@@ -77,7 +77,7 @@ let s:disable_italic = get(g:,'colorscheme_primary_disable_italic', 0)
 "    endfor
 "  endif
 
-endif
+" endif
 
 "Reverse greyscale for light vs dark modes
 if &background == 'dark'
