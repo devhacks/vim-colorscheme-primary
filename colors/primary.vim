@@ -27,7 +27,7 @@ endif
 let g:colors_name = 'primary'
 let s:disable_italic = get(g:,'colorscheme_primary_disable_italic', 0)
 
-if (has('gui_running'))  "Graphical Vim
+" if (has('gui_running'))  "Graphical Vim
   "Set color palette with RGB colors
   let s:RED    = '#EA4335'
   let s:GREEN  = '#34A853'
@@ -42,40 +42,40 @@ if (has('gui_running'))  "Graphical Vim
   let s:M = 'gui'
   let s:I = s:disable_italic ? 'none' : 'italic'
 
-else                     "Console Vim
-  if &t_Co == 256
-    "Set color palette with 256 colors
-    let s:RED    = '167'
-    let s:GREEN  = '71'
-    let s:YELLOW = '220'
-    let s:BLUE   = '69'
-    let s:BLACK  = '16'
-    let s:DGREY  = '241'
-    let s:LGREY  = '255'
-    let s:WHITE  = '231'
-  else
-    "Set color palette with color names
-    let s:RED    = 'red'
-    let s:GREEN  = 'green'
-    let s:YELLOW = 'yellow'
-    let s:BLUE   = 'blue'
-    let s:BLACK  = 'black'
-    let s:DGREY  = 'grey'
-    let s:LGREY  = 'grey'
-    let s:WHITE  = 'white'
-  endif
+"else                     "Console Vim
+"  if &t_Co == 256
+"    "Set color palette with 256 colors
+"    let s:RED    = '167'
+"    let s:GREEN  = '71'
+"    let s:YELLOW = '220'
+"    let s:BLUE   = '69'
+"    let s:BLACK  = '16'
+"    let s:DGREY  = '241'
+"    let s:LGREY  = '255'
+"    let s:WHITE  = '231'
+"  else
+"    "Set color palette with color names
+"    let s:RED    = 'red'
+"    let s:GREEN  = 'green'
+"    let s:YELLOW = 'yellow'
+"    let s:BLUE   = 'blue'
+"    let s:BLACK  = 'black'
+"    let s:DGREY  = 'grey'
+"    let s:LGREY  = 'grey'
+"    let s:WHITE  = 'white'
+"  endif
 
-  "Set terminal mode and italics (if supported)
-  let s:M = 'cterm'
-  let s:I = 'none'
-  if !s:disable_italic
-    let s:terms = ['rxvt', 'gnome-terminal']
-    for s:term in s:terms
-      if $TERM_PROGRAM =~ s:term
-        let s:I = 'italic'
-      endif
-    endfor
-  endif
+"  "Set terminal mode and italics (if supported)
+"  let s:M = 'cterm'
+"  let s:I = 'none'
+"  if !s:disable_italic
+"    let s:terms = ['rxvt', 'gnome-terminal']
+"    for s:term in s:terms
+"      if $TERM_PROGRAM =~ s:term
+"        let s:I = 'italic'
+"      endif
+"    endfor
+"  endif
 
 endif
 
